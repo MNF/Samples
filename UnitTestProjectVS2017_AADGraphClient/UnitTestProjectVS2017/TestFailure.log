@@ -1,0 +1,26 @@
+﻿
+Test method UnitTestProjectCore.TeamLeadersRetrievalTests.TeamLeadersRetrieval_ServiceCenterManagerRoleId_ReturnsEmailList threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'Microsoft.Data.Services.Client, Version=5.6.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+    at System.Signature.GetSignature(Void* pCorSig, Int32 cCorSig, RuntimeFieldHandleInternal fieldHandle, IRuntimeMethodInfo methodHandle, RuntimeType declaringType)
+   at System.Reflection.RuntimeMethodInfo.FetchNonReturnParameters()
+   at System.Reflection.RuntimeMethodInfo.GetParametersNoCopy()
+   at System.Reflection.RuntimePropertyInfo.GetIndexParametersNoCopy()
+   at System.Reflection.RuntimePropertyInfo.GetIndexParameters()
+   at Castle.DynamicProxy.Contributors.MembersCollector.AddProperty(PropertyInfo property, IProxyGenerationHook hook)
+   at Castle.DynamicProxy.Contributors.MembersCollector.CollectProperties(IProxyGenerationHook hook)
+   at Castle.DynamicProxy.Contributors.MembersCollector.CollectMembersToProxy(IProxyGenerationHook hook)
+   at Castle.DynamicProxy.Contributors.InterfaceProxyWithoutTargetContributor.<CollectElementsToProxyInternal>d__0.MoveNext()
+   at Castle.DynamicProxy.Contributors.CompositeTypeContributor.CollectElementsToProxy(IProxyGenerationHook hook, MetaType model)
+   at Castle.DynamicProxy.Generators.InterfaceProxyWithoutTargetGenerator.GenerateType(String typeName, Type proxyTargetType, Type[] interfaces, INamingScope namingScope)
+   at Castle.DynamicProxy.Generators.InterfaceProxyWithTargetGenerator.<>c__DisplayClass1.<GenerateCode>b__0(String n, INamingScope s)
+   at Castle.DynamicProxy.Generators.BaseProxyGenerator.ObtainProxyType(CacheKey cacheKey, Func`3 factory)
+   at Castle.DynamicProxy.ProxyGenerator.CreateInterfaceProxyWithoutTarget(Type interfaceToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, IInterceptor[] interceptors)
+   at NSubstitute.Proxies.CastleDynamicProxy.CastleDynamicProxyFactory.GenerateProxy(ICallRouter callRouter, Type typeToProxy, Type[] additionalInterfaces, Object[] constructorArguments)
+   at NSubstitute.Core.SubstituteFactory.Create(Type[] typesToProxy, Object[] constructorArguments, SubstituteConfig config)
+   at NSubstitute.Substitute.For[T](Object[] constructorArguments)
+   at UnitTestProjectCore.TeamLeadersRetrievalTests.GetDirectoryObjectList() in C:\Projects\Samples\UnitTestProjectCore\UnitTestProjectCore\TeamLeadersRetrievalTests.cs:line 126
+   at UnitTestProjectCore.TeamLeadersRetrievalTests.GetGroupWithMembersSubstitute() in C:\Projects\Samples\UnitTestProjectCore\UnitTestProjectCore\TeamLeadersRetrievalTests.cs:line 110
+   at UnitTestProjectCore.TeamLeadersRetrievalTests.GetGraphClientSubstituteWithGroupMembers() in C:\Projects\Samples\UnitTestProjectCore\UnitTestProjectCore\TeamLeadersRetrievalTests.cs:line 61
+   at UnitTestProjectCore.TeamLeadersRetrievalTests.TeamLeadersRetrieval_ServiceCenterManagerRoleId_ReturnsEmailList() in C:\Projects\Samples\UnitTestProjectCore\UnitTestProjectCore\TeamLeadersRetrievalTests.cs:line 27
+
+
