@@ -29,12 +29,14 @@ namespace SwashbuckleTests
             {
                 c.SwaggerDoc("v1", new Info { Title = "Swashbuckle Example Api", Version = "v1" });
                 var basePath = AppContext.BaseDirectory;
-                var filePath = Path.Combine(basePath, "TravellerProfileApi.xml");
+ 				var commentsFileName = Assembly.GetExecutingAssembly().GetName().Name + ".XML";
+                var filePath = Path.Combine(basePath, commentsFileName);
                 // TODO: fix the code so that TravellerProfileApi.xml can be found in the correct path /app/ inside docker container
                 if (File.Exists(filePath))
                 {
                     c.IncludeXmlComments(filePath);
                 }
+                c.MapType<DateTime>(() => new Schema { Type = "string", Format = "date" });
             });
             services.AddMvc();
         }
